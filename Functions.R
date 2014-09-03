@@ -29,10 +29,10 @@ kmeansCluster <- function(img, centers, iter.max=10, nstart=1, algorithm = c("Ha
 
 
 # Function for segmenting cell images and extracting Shape,size and texture related features
+library(biOps)
+library(EBImage)
+library(alphahull)
 segment_image <- function(path_in,path_out,green_channel=F,red_channel=F,day_nmbr,Drug_name){
-  library(biOps)
-  library(EBImage)
-  library(alphahull)
   all_files = list.files(path_in)
   image_ix = grep(pattern=".tif", x=all_files)
   image_names = all_files[image_ix]
