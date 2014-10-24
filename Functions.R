@@ -1,4 +1,4 @@
-##Function for Kmean clustering algorithm implementation on Image data#
+##Function for Kmean clustering algorithm implementation on Image data
 
 kmeansCluster <- function(img, centers, iter.max=10, nstart=1, algorithm = c("Hartigan-Wong","Lloyd", "Forgy", "MacQueen")){
   clust <- kmeans(as.vector(img), centers, iter.max, nstart, algorithm)
